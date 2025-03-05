@@ -1,0 +1,10 @@
+<section class="todoForm">
+  <h2>Todo App!</h2>
+  <p>Add your new todo now</p>
+  <form>
+    <input #inputValue type="text" placeholder="Enter new task" />
+    <button type="button" (click)="handleAddingNew(inputValue.value)">
+      Add task
+    </button>
+  </form>
+</section>

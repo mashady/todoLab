@@ -1,0 +1,21 @@
+<div>
+  @for(todo of allTodo;track todo.id){
+  <div class="todoWrapper">
+    <div>
+      <span style="margin-right: 10px">{{ todo.name }}</span>
+      <span
+        class="badge"
+        [ngStyle]="{ 'background-color': todo.completed ? 'green' : 'orange' }"
+      >
+        {{ todo.completed ? "completed" : "pendding" }}
+      </span>
+    </div>
+    <div>
+      <button (click)="hanldeDeleteButton(todo.id)">x</button>
+      <button (click)="handleChangeStatus(todo)">
+        {{ todo.completed ? "undo" : "complete" }}
+      </button>
+    </div>
+  </div>
+  }
+</div>

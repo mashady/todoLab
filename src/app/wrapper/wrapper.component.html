@@ -1,0 +1,8 @@
+<section class="wrapper">
+  <app-todo-form (newTodoSender)="newTodo($event)"></app-todo-form>
+  <app-todo-list
+    [allTodo]="allTodo"
+    (toggler)="taskStatus($event)"
+    (handleDelete)="deleteTodo($event)"
+  ></app-todo-list>
+</section>
